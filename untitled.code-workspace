@@ -1,0 +1,36 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "root"
+        }
+    ],
+    "settings": {
+        // editor settings
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true, // 保存時にフォーマット
+        "extensions.ignoreRecommendations": false, // 推奨拡張機能を表示
+        // python settings
+        "python.defaultInterpreterPath": "/usr/local/bin/python", // pythonの実行環境（プロジェクトごとに書換）
+        "python.terminal.activateEnvironment": false, // terminal起動時に仮想環境を利用するか（プロジェクトごとに置換）
+        "python.testing.unittestEnabled": false, // python unittestを使わない
+        "python.testing.pytestEnabled": false, // python pytestの使用（プロジェクトごとに書換）
+        "python.analysis.typeCheckingMode": "basic", // python型チェックを標準にする
+        "ruff.organizeImports": false,
+        "ruff.format.args": [
+            "--config=pyproject.toml" // ruff設定をpyproject.tomlから読む
+        ],
+        "[python]": {
+            "editor.defaultFormatter": "charliermarsh.ruff", // formatterをruffに設定
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "oderwat.indent-rainbow", // インデントをカラフルにする
+            "usernamehw.errorlens", // エラーを行に表示
+            "Gruntfuggly.todo-tree", // 管理しやすいTodo
+            "shardulm94.trailing-spaces", // 行末のスペースを見える化
+        ]
+    }
+}
