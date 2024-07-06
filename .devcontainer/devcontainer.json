@@ -1,0 +1,25 @@
+{
+    "name": "python:3.12-bookworm",
+    "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+    "features": {
+        "ghcr.io/devcontainers-contrib/features/poetry:2": {}
+    },
+    "containerEnv": {
+        "PYTHONDONTWRITEBYTECODE": "1" // for pytest no cache
+    },
+    "updateContentCommand": {
+        "for_poetry_setting": "poetry config virtualenvs.in-project true"
+    },
+    "postCreateCommand": {
+        "pj_setting": ""
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}
